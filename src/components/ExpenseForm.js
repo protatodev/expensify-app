@@ -4,7 +4,6 @@ import { SingleDatePicker } from 'react-dates';
 
 
 const now = moment();
-console.log(now.format('MMM Do, YYYY @ h:mm:ss A'));
 
 class ExpenseForm extends React.Component {
   constructor(props) {
