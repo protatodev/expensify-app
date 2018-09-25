@@ -1,7 +1,7 @@
 // EXPENSES REDUCER
 const expensesReducerDefaultState = [];
 
-const expensesReducer = (state = expensesReducerDefaultState, {type, expense, id, updates}) => {
+const expensesReducer = (state = expensesReducerDefaultState, {type, expense, id, updates, expenses}) => {
   switch(type) {
     case 'ADD_EXPENSE':
       return [
@@ -21,6 +21,8 @@ const expensesReducer = (state = expensesReducerDefaultState, {type, expense, id
           return expense;
         }
       });
+    case 'SET_EXPENSES':
+      return expenses;
     default:
       return state;
   }
